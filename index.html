@@ -107,6 +107,32 @@
           U+f28e, U+f29b-f29c, U+f2b7, U+f2ba, U+f2bc, U+f2be, U+f2c0, U+f2c3,
           U+f2d3-f2d4;
       }
+
+      .fixed-size {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .fixed-card-size {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-body {
+        flex-grow: 1; /* Pour remplir l'espace restant */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #portfolio > div > div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
     </style>
   </head>
 
@@ -124,7 +150,8 @@
         >
         <div class="container">
           <a class="navbar-brand text-uppercase fw-bold" href="#">
-            <span class="bg-warning bg-gradient p-1 rounded-3 text-secondary"
+            <span
+              class="ms-5 bg-warning bg-gradient p-1 rounded-3 text-secondary"
               >Maryam</span
             >
             HANINE
@@ -146,10 +173,10 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#johndoe">Qui suis-je ?</a>
+                <a class="nav-link" href="#maryam">Qui suis-je ?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#expertise">Mes compétences</a>
+                <a class="nav-link" href="#outils">Mes compétences</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#portfolio">Mes projets</a>
@@ -164,25 +191,23 @@
     </header>
     <main>
       <!-- Un petit mot Sur moi  -->
-      <section id="johndoe" class="my-5">
+      <section id="maryam" class="my-5">
         <div class="container">
           <div class="row gy-4 align-items-center">
             <div class="col-12 col-md-6">
               <h1 class="fw-bold">
-                Moi, c'est <b class="fw-bold">Maryam</b>, une Dévloppeuse Web et
-                Web Mobile
+                Moi, c'est <b class="fw-bold">Maryam</b>, une dévloppeuse Web et
+                Web Mobile junior
               </h1>
               <h2 class="fw-light">
-                Je suis une personne pondérée, motivée et créative
+                Je suis une personne dynamique, motivée et créative
               </h2>
-              <a href="#expertise" class="btn btn-warning mt-5"
-                >Mes compétences</a
-              >
+              <a href="#contact" class="btn btn-warning mt-5">Me contacter</a>
             </div>
             <div class="col-12 col-md-6">
               <img
                 src="monavatar2.png"
-                alt="maryam hanine"
+                alt="maryam hn"
                 width="100%"
                 class="rounded-3 shadow"
               />
@@ -191,10 +216,10 @@
         </div>
       </section>
 
-      <!-- Expertise -->
-      <section id="expertise" class="py-5 bg-light">
+      <section id="outils" class="py-5 bg-light">
+        <!-- Langages, logiciels et librairies -->
         <div class="container">
-          <h2 class="mb-0">Mon expertise</h2>
+          <h2 class="mb-0">Langages, logiciels et librairies</h2>
           <h3 class="fw-light fs-5">Développement web et design</h3>
           <!-- Developpement -->
           <div class="row align-items-center gy-4 mt-4">
@@ -246,12 +271,12 @@
                       class="progress"
                       data-bs-toggle="tooltip"
                       title=""
-                      data-bs-original-title="100%"
+                      data-bs-original-title="75%"
                     >
                       <div
-                        class="progress-bar w-100"
+                        class="progress-bar w-75"
                         role="progressbar"
-                        aria-valuenow="100"
+                        aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
@@ -324,11 +349,106 @@
                 <div class="row align-items-center">
                   <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
                     <div class="d-flex align-items-center">
+                      <img
+                        src="mysql.png"
+                        alt="y sql"
+                        height="37"
+                        class="me-2"
+                      />
+                      <p class="fw-bold m-0">MySQL</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="progress"
+                      data-bs-toggle="tooltip"
+                      title=""
+                      data-bs-original-title="75%"
+                    >
+                      <div
+                        class="progress-bar w-75"
+                        role="progressbar"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <div class="row align-items-center">
+                  <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                    <div class="d-flex align-items-center">
                       <i
-                        class="fab fa-sass fa-2x me-3 text-warning"
+                        class="fab fa-python fa-2x me-3 text-warning"
                         aria-hidden="true"
                       ></i>
-                      <p class="fw-bold m-0">SASS</p>
+                      <p class="fw-bold m-0">Python</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="progress"
+                      data-bs-toggle="tooltip"
+                      title=""
+                      data-bs-original-title="50%"
+                    >
+                      <div
+                        class="progress-bar w-50"
+                        role="progressbar"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <div class="row align-items-center">
+                  <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                    <div class="d-flex justify-content-center">
+                      <img
+                        src="r.png"
+                        alt="statistiques sous R"
+                        height="35px"
+                        class="ms-2 me-2"
+                      />
+                      <p class="fw-bold m-0">statistiques sous R</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="progress"
+                      data-bs-toggle="tooltip"
+                      title=""
+                      data-bs-original-title="50%"
+                    >
+                      <div
+                        class="progress-bar w-50"
+                        role="progressbar"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <div class="row align-items-center">
+                  <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="jquery.png"
+                        alt="jquery ocone"
+                        height="34px"
+                        class="me-2"
+                      />
+                      <p class="fw-bold m-0">JQuey</p>
                     </div>
                   </div>
                   <div class="col">
@@ -352,24 +472,28 @@
             </div>
             <div class="col-12 offset-md-1 col-md-4">
               <img
-                src="../img/code.jpg"
+                src="docker_symfony_coding.gif"
                 alt="écran montrant du code php"
-                width="100%"
+                width="130%"
+                height="auto"
                 class="rounded-3 shadow"
               />
             </div>
           </div>
 
           <!-- Design -->
+          <h2 class="mb-0">Outils, logiciels et Frameworks</h2>
+          <h3 class="fw-light fs-5">Développement web et design</h3>
           <div class="row align-items-center gy-4 mt-4">
             <div class="col-12 col-md-4">
               <img
-                src="../img/design.jpg"
+                src="figma_design.gif"
                 alt="écran montrant des designs"
-                width="100%"
+                width="120%"
                 class="rounded-3 shadow"
               />
             </div>
+
             <div class="col-12 order-first offset-md-1 col-md-7 order-md-last">
               <!-- Progress bar -->
               <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
@@ -405,42 +529,12 @@
               <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
                 <div class="row align-items-center">
                   <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex justify-content-center">
                       <i
-                        class="fas fa-photo-video fa-2x me-3 text-warning"
+                        class="fab fa-bootstrap fa-2x me-2 ms-2 text-warning"
                         aria-hidden="true"
                       ></i>
-                      <p class="fw-bold m-0">Suite Adobe</p>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div
-                      class="progress"
-                      data-bs-toggle="tooltip"
-                      title=""
-                      data-bs-original-title="100%"
-                    >
-                      <div
-                        class="progress-bar w-100"
-                        role="progressbar"
-                        aria-valuenow="100"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
-                <div class="row align-items-center">
-                  <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
-                    <div class="d-flex align-items-center">
-                      <i
-                        class="fas fa-palette fa-2x me-3 text-warning"
-                        aria-hidden="true"
-                      ></i>
-                      <p class="fw-bold m-0">Design UI</p>
+                      <p class="fw-bold m-0">Bootstrap</p>
                     </div>
                   </div>
                   <div class="col">
@@ -467,10 +561,10 @@
                   <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
                     <div class="d-flex align-items-center">
                       <i
-                        class="fas fa-vial fa-2x me-3 text-warning"
+                        class="fab fa-symfony fa-2x me-3 text-warning"
                         aria-hidden="true"
                       ></i>
-                      <p class="fw-bold m-0">Design UX</p>
+                      <p class="fw-bold m-0">Symfony</p>
                     </div>
                   </div>
                   <div class="col">
@@ -497,10 +591,10 @@
                   <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
                     <div class="d-flex align-items-center">
                       <i
-                        class="fas fa-video fa-2x me-3 text-warning"
+                        class="fab fa-docker fa-2x me-3 text-warning"
                         aria-hidden="true"
                       ></i>
-                      <p class="fw-bold m-0">Vidéo</p>
+                      <p class="fw-bold m-0">Docker</p>
                     </div>
                   </div>
                   <div class="col">
@@ -508,12 +602,42 @@
                       class="progress"
                       data-bs-toggle="tooltip"
                       title=""
-                      data-bs-original-title="50%"
+                      data-bs-original-title="75%"
                     >
                       <div
-                        class="progress-bar w-50"
+                        class="progress-bar w-75"
                         role="progressbar"
-                        aria-valuenow="50"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3 p-3 bg-white rounded-3 shadow-sm">
+                <div class="row align-items-center">
+                  <div class="col-5 col-sm-4 col-lg-3 col-xl-2">
+                    <div class="d-flex align-items-center">
+                      <i
+                        class="fab fa-github fa-2x me-3 text-warning"
+                        aria-hidden="true"
+                      ></i>
+                      <p class="fw-bold m-0">Git et GitHub</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div
+                      class="progress"
+                      data-bs-toggle="tooltip"
+                      title=""
+                      data-bs-original-title="75%"
+                    >
+                      <div
+                        class="progress-bar w-75"
+                        role="progressbar"
+                        aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
@@ -529,22 +653,19 @@
       <section id="portfolio" class="py-5">
         <div class="container">
           <h2 class="mb-0">Mon portfolio</h2>
-          <h3 class="fw-light fs-5">Projets perso et pro</h3>
+          <h3 class="fw-light fs-5">Projets personnels et professionnels</h3>
 
           <div class="row gy-4 gy-md-0 mt-4">
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card">
+              <div class="card fixed-card-size">
                 <img
-                  src="https://picsum.photos/300/150?random=1"
-                  class="card-img-top"
-                  alt="..."
+                  src="/stellarsight/stellarsight_0.PNG"
+                  class="card-img-top fixed-size"
+                  alt="images projet 1"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Projet 1</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce sollicitudin.
-                  </p>
+                  <h5 class="card-title">Projet 1 : NASA APIs</h5>
+                  <p class="card-text">HTML, CSS, Js, Fetch, Tailwind</p>
                   <a
                     class="btn btn-warning"
                     data-bs-toggle="offcanvas"
@@ -582,16 +703,13 @@
                           data-bs-interval="10000"
                         >
                           <img
-                            src="https://picsum.photos/1920/1080?random=1"
+                            src="/stellarsight/stellarsight_3.PNG"
                             class="d-block w-100"
                             alt="Image slide 1"
                           />
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Slide 1</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
+                            <p>Page d'accueil de l'application.</p>
                           </div>
                         </div>
                         <div
@@ -599,29 +717,27 @@
                           data-bs-interval="2000"
                         >
                           <img
-                            src="https://picsum.photos/1920/1080?random=2"
+                            src="/stellarsight/stellarsight_1.PNG"
                             class="d-block w-100"
                             alt="Image slide 2"
                           />
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Slide 2</h5>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
+                              images de l'espace utilisant une API de la NASA.
                             </p>
                           </div>
                         </div>
                         <div class="carousel-item h-100">
                           <img
-                            src="https://picsum.photos/1920/1080?random=3"
+                            src="/stellarsight/stellarsight_2.PNG"
                             class="d-block w-100"
                             alt="Image slide 3"
                           />
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Slide 3</h5>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
+                              images de la Terre utilisant une API de la NASA.
                             </p>
                           </div>
                         </div>
@@ -656,18 +772,17 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card">
+              <div class="card fixed-card-size">
                 <img
-                  src="https://picsum.photos/300/150?random=2"
-                  class="card-img-top"
-                  alt="..."
+                  src="/NabaTea/nabatea_0.PNG"
+                  class="card-img-top fixed-size"
+                  alt="image projet 2"
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Projet 2</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce sollicitudin.
-                  </p>
+                  <h5 class="card-title">
+                    Projet 2 : Bootstrap, MVC, Symfony, JQuery
+                  </h5>
+                  <p class="card-text">Projet personnel de fin d'année</p>
                   <a
                     class="btn btn-warning"
                     data-bs-toggle="offcanvas"
@@ -705,16 +820,13 @@
                           data-bs-interval="10000"
                         >
                           <img
-                            src="https://picsum.photos/1920/1080?random=4"
+                            src="/NabaTea/nabatea_1.PNG"
                             class="d-block w-100"
                             alt="Image slide 1"
                           />
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Slide 1</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
+                            <p>Page de connexion</p>
                           </div>
                         </div>
                         <div
@@ -722,30 +834,24 @@
                           data-bs-interval="2000"
                         >
                           <img
-                            src="https://picsum.photos/1920/1080?random=5"
+                            src="/NabaTea/nabatea_2.PNG"
                             class="d-block w-100"
                             alt="Image slide 2"
                           />
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Slide 2</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
+                            <p>Page d'inscription au site.</p>
                           </div>
                         </div>
                         <div class="carousel-item h-100">
                           <img
-                            src="https://picsum.photos/1920/1080?random=6"
+                            src="/NabaTea/nabatea_3.png"
                             class="d-block w-100"
                             alt="Image slide 3"
                           />
                           <div class="carousel-caption d-none d-md-block">
                             <h5>Slide 3</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
+                            <p>Page produit du site</p>
                           </div>
                         </div>
                       </div>
@@ -779,17 +885,17 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card">
+              <div class="card fixed-card-size">
                 <img
-                  src="https://picsum.photos/300/150?random=3"
-                  class="card-img-top"
+                  src="/techInPink/tech_in_pink_0.PNG"
+                  class="card-img-top fixed-size"
                   alt="..."
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Projet 3</h5>
+                  <h5 class="card-title">Projet 3 : HML, CSS, JS</h5>
                   <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce sollicitudin.
+                    Projet pour s'entrainer à utiliser :HTML, CSS et
+                    pseud-classes CSS, grid et flexBox
                   </p>
                   <a
                     class="btn btn-warning"
@@ -806,7 +912,9 @@
                   aria-labelledby="titelProjet3"
                 >
                   <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="titelProjet1">Projet 3</h5>
+                    <h5 class="offcanvas-title" id="titelProjet1">
+                      Projet 3 : HML, CSS, JS
+                    </h5>
                     <button
                       type="button"
                       class="btn-close text-reset"
@@ -828,7 +936,7 @@
                           data-bs-interval="10000"
                         >
                           <img
-                            src="https://picsum.photos/1920/1080?random=7"
+                            src="/techInPink/tech_in_pink_1.PNG"
                             class="d-block w-100"
                             alt="Image slide 1"
                           />
@@ -845,7 +953,7 @@
                           data-bs-interval="2000"
                         >
                           <img
-                            src="https://picsum.photos/1920/1080?random=8"
+                            src="/techInPink/tech_in_pink_2.PNG"
                             class="d-block w-100"
                             alt="Image slide 2"
                           />
@@ -859,7 +967,7 @@
                         </div>
                         <div class="carousel-item h-100">
                           <img
-                            src="https://picsum.photos/1920/1080?random=9"
+                            src="/techInPink/tech_in_pink_3.PNG"
                             class="d-block w-100"
                             alt="Image slide 3"
                           />
@@ -888,129 +996,6 @@
                         class="carousel-control-next"
                         type="button"
                         data-bs-target="#carouselProject3"
-                        data-bs-slide="next"
-                      >
-                        <span
-                          class="carousel-control-next-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/150?random=4"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Projet 4</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce sollicitudin.
-                  </p>
-                  <a
-                    class="btn btn-warning"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#infoProjet4"
-                    aria-controls="infoProjet4"
-                    >En savoir plus</a
-                  >
-                </div>
-                <div
-                  class="offcanvas offcanvas-bottom h-100"
-                  tabindex="-1"
-                  id="infoProjet4"
-                  aria-labelledby="titelProjet4"
-                >
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="titelProjet1">Projet 4</h5>
-                    <button
-                      type="button"
-                      class="btn-close text-reset"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <!-- Carousel -->
-                    <div
-                      id="carouselProject4"
-                      class="carousel slide shadow h-100"
-                      data-bs-ride="carousel"
-                      data-bs-touch="true"
-                    >
-                      <div class="carousel-inner h-100">
-                        <div
-                          class="carousel-item h-100 active"
-                          data-bs-interval="10000"
-                        >
-                          <img
-                            src="https://picsum.photos/1920/1080?random=10"
-                            class="d-block w-100"
-                            alt="Image slide 1"
-                          />
-                          <div class="carousel-caption d-none d-md-block">
-                            <h5>Slide 1</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="carousel-item h-100"
-                          data-bs-interval="2000"
-                        >
-                          <img
-                            src="https://picsum.photos/1920/1080?random=11"
-                            class="d-block w-100"
-                            alt="Image slide 2"
-                          />
-                          <div class="carousel-caption d-none d-md-block">
-                            <h5>Slide 2</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="carousel-item h-100">
-                          <img
-                            src="https://picsum.photos/1920/1080?random=12"
-                            class="d-block w-100"
-                            alt="Image slide 3"
-                          />
-                          <div class="carousel-caption d-none d-md-block">
-                            <h5>Slide 3</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce sollicitudin.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <button
-                        class="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselProject4"
-                        data-bs-slide="prev"
-                      >
-                        <span
-                          class="carousel-control-prev-icon"
-                          aria-hidden="true"
-                        ></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button
-                        class="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselProject4"
                         data-bs-slide="next"
                       >
                         <span
@@ -1036,8 +1021,8 @@
           <div class="row gy-4 mt-4">
             <div class="col-12 col-md-5">
               <img
-                src="../img/grab-a-coffee.jpg"
-                alt="Image d'une tasse de café"
+                src="lets_discuss.png"
+                alt="lets discuss"
                 width="100%"
                 class="rounded-3 shadow"
               />
@@ -1097,10 +1082,10 @@
         <div class="row gy-4 align-items-center">
           <div class="col-12 col-md-4">
             <a class="navbar-brand text-dark text-uppercase fw-bold" href="#">
-              <span class="bg-warning bg-gradient p-1 rounded-3 text-light"
-                >John</span
-              >
-              Doe
+              <span class="bg-warning bg-gradient p-1 me-2 rounded-3 text-light"
+                >Maryam
+              </span>
+              HANINE
             </a>
           </div>
           <div class="col-12 col-md-4 text-md-center">
@@ -1120,7 +1105,7 @@
             <ul class="list-inline mb-0">
               <li class="list-inline-item">
                 <a
-                  href="#"
+                  href="www.linkedin.com/in/maryam-hn"
                   class="text-decoration-none text-dark"
                   data-bs-toggle="tooltip"
                   title=""
@@ -1131,27 +1116,24 @@
               </li>
               <li class="list-inline-item">
                 <a
-                  href="#"
+                  href="maryam.hn.pro@outlook.fr"
                   class="text-decoration-none text-dark"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-bs-original-title="Instagram"
+                  data-bs-original-title="message"
                 >
-                  <i
-                    class="fab fa-instagram-square fa-2x"
-                    aria-hidden="true"
-                  ></i>
+                  <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a
-                  href="#"
+                  href="maryamGitHubPro"
                   class="text-decoration-none text-dark"
                   data-bs-toggle="tooltip"
                   title=""
-                  data-bs-original-title="Twitter"
+                  data-bs-original-title="GitHub"
                 >
-                  <i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i>
+                  <i class="fab fa-github-square fa-2x" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
